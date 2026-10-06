@@ -1,6 +1,6 @@
 [versions]
-minecraft = "26.1.1"
-neoForge = "26.1.1.15-beta"
+minecraft = "26.1.2"
+neoForge = "26.1.2.114"
 modDevGradle = "2.0.148"
 lombok = "8.7.1"
 
