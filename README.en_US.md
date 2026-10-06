@@ -27,11 +27,11 @@ repositories {
 }
 
 dependencies {
-    jarJar(implementation("dev.anvilcraft.crash:crash_sinytra-neoforge-1.21.1:1.0.0+snapshot.+"))
+    jarJar(implementation("dev.anvilcraft.crash:crash_sinytra-neoforge-26.1:1.0.0+snapshot.+"))
 }
 ```
 
-- Maven: <https://server.cjsah.net:1002/maven/dev/anvilcraft/crash/crash_sinytra-neoforge-1.21.1/>
+- Maven: <https://server.cjsah.net:1002/maven/dev/anvilcraft/crash/crash_sinytra-neoforge-26.1/>
 - Recommended version: `1.0.0+snapshot.+`
 
 Once embedded, this mod is bundled into your mod's build artifact. Players who install your mod together with Sinytra Connector will receive a clear incompatibility error during startup.

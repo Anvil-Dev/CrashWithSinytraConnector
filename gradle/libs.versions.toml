@@ -1,7 +1,7 @@
 [versions]
-minecraft = "1.21.1"
-neoForge = "21.1.241"
-modDevGradle = "2.0.142"
+minecraft = "26.1"
+neoForge = "26.1.0.19-beta"
+modDevGradle = "2.0.148"
 lombok = "8.7.1"
 
 [libraries]

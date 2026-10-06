@@ -27,11 +27,11 @@ repositories {
 }
 
 dependencies {
-    jarJar(implementation("dev.anvilcraft.crash:crash_sinytra-neoforge-1.21.1:1.0.0+snapshot.+"))
+    jarJar(implementation("dev.anvilcraft.crash:crash_sinytra-neoforge-26.1:1.0.0+snapshot.+"))
 }
 ```
 
-- Maven 地址：<https://server.cjsah.net:1002/maven/dev/anvilcraft/crash/crash_sinytra-neoforge-1.21.1/>
+- Maven 地址：<https://server.cjsah.net:1002/maven/dev/anvilcraft/crash/crash_sinytra-neoforge-26.1/>
 - 推荐版本号：`1.0.0+snapshot.+`
 
 嵌入后，你的模组构建产物中会包含本模组，玩家安装你的模组并同时使用信雅互联时会在启动阶段收到明确的不兼容提示。
