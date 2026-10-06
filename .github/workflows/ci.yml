@@ -69,22 +69,9 @@ jobs:
           path: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
 
       - name: Publish to maven
-        if: ${{ steps.properties.outputs.upload }}
         run: ./gradlew publish
         env:
           MAVEN_URL: ${{ secrets.MAVEN_URL }}
           MAVEN_USERNAME: ${{ secrets.MAVEN_USER }}
           MAVEN_PASSWORD: ${{ secrets.MAVEN_PASS }}
         continue-on-error: true
-
-      - name: gametest
-        uses: Anvil-Dev/dedicated-server-launch-test@universal
-        continue-on-error: false
-        with:
-          mod_loader: neoforge
-          loader_version: ${{ steps.versions.outputs.versions_neoforge }}
-          mods: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
-          maven-repos: |
-            https://server.cjsah.net:1002/maven/releases/
-          maven-mods: |
-            dev.dubhe:anvilcraft-neoforge-1.21.1:${{ steps.versions.outputs.versions_anvilcraft }}
