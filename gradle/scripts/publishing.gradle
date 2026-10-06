@@ -5,9 +5,9 @@ artifacts {
 
 publishing {
     publications {
-        register('mavenJava', MavenPublication) {
+        mavenJava(MavenPublication) {
             groupId = project.group
-            artifactId = project.archivesBaseName
+            artifactId = project.base.archivesName.get()
             version = project.version
 
             from components.java
@@ -15,7 +15,10 @@ publishing {
             artifact sourcesJar
         }
     }
+
+    // See https://docs.gradle.org/current/userguide/publishing_maven.html for information on how to set up publishing.
     repositories {
+        // Add repositories to publish to here.
         def MAVEN_URL = System.getenv("MAVEN_URL")
         if (MAVEN_URL != null) {
             maven {
@@ -25,11 +28,6 @@ publishing {
                     password System.getenv("MAVEN_PASSWORD")
                 }
             }
-        } else {
-            maven {
-                url "file://${project.projectDir}/repo"
-            }
-            mavenLocal()
         }
     }
 }
