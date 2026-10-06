@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 var generateModMetadata = tasks.register("generateModMetadata", ProcessResources) {
     var replaceProperties = [minecraft_version      : libs.versions.minecraft.get(),
                              minecraft_version_range: minecraft_version_range,
@@ -14,6 +16,28 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
     expand replaceProperties
     from "src/main/templates"
     into "build/generated/sources/modMetadata"
+
+    // 构建时读取 sinytra_reason.json，向 neoforge.mods.toml 追加 Sinytra Connector 组件的不兼容声明
+    def sinytraReasonFile = rootProject.file("sinytra_reason.json")
+    def modId = mod_id
+    inputs.file sinytraReasonFile
+    doLast {
+        def reasons = new JsonSlurper().parse(sinytraReasonFile)
+        def modsToml = new File(destinationDir, "META-INF/neoforge.mods.toml")
+        modsToml.withWriterAppend("UTF-8") { writer ->
+            reasons.each { entry ->
+                def reason = entry.reason.replace("\\", "\\\\").replace("\"", "\\\"")
+                writer.writeLine("")
+                writer.writeLine('[[dependencies."' + modId + '"]]')
+                writer.writeLine('modId = "' + entry.id + '"')
+                writer.writeLine('type="incompatible"')
+                writer.writeLine('reason="' + reason + '"')
+                writer.writeLine('versionRange = ""')
+                writer.writeLine('ordering = "NONE"')
+                writer.writeLine('side = "BOTH"')
+            }
+        }
+    }
 }
 
 sourceSets.main.resources.srcDir generateModMetadata
