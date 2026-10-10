@@ -1,0 +1,4 @@
+{
+  "crash_sinytra.message.with_host": "{0}: 이 모드와 Sinytra Connector 간의 호환성을 보장할 수 없습니다.\nSinytra Connector 구성 요소를 사용하는 모드와 함께 설치하지 마세요.",
+  "crash_sinytra.message.without_host": "Sinytra Connector는 이 모드팩과 호환되지 않습니다.\nSinytra Connector 구성 요소를 사용하는 모드와 함께 설치하지 마세요."
+}
