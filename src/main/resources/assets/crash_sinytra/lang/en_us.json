@@ -1,0 +1,4 @@
+{
+  "crash_sinytra.message.with_host": "The mod {0} is incompatible with Sinytra Connector.\nPlease uninstall Sinytra Connector and all of its components, or uninstall {0}, then try again.",
+  "crash_sinytra.message.without_host": "Sinytra Connector is incompatible with this modpack.\nPlease uninstall Sinytra Connector and all of its components, then try again."
+}
