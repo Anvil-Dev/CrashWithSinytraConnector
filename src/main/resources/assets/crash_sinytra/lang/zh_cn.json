@@ -1,0 +1,4 @@
+{
+  "crash_sinytra.message.with_host": "模组 {0} 与信雅互联（Sinytra Connector）不兼容。\n请卸载信雅互联及其全部组件，或卸载 {0} 后重试。",
+  "crash_sinytra.message.without_host": "信雅互联（Sinytra Connector）与本整合环境不兼容。\n请卸载信雅互联及其全部组件后重试。"
+}
