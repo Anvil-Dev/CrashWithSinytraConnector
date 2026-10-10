@@ -1,0 +1,4 @@
+{
+  "crash_sinytra.message.with_host": "{0}: 我們無法保證此模組與信雅互聯（Sinytra Connector）之間的兼容性。\n請勿與任何使用信雅互聯（Sinytra Connector）組件的模組同時安裝。",
+  "crash_sinytra.message.without_host": "信雅互聯（Sinytra Connector）與本整合環境不兼容。\n請勿與任何使用信雅互聯（Sinytra Connector）組件的模組同時安裝。"
+}
