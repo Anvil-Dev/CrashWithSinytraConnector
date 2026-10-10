@@ -120,3 +120,6 @@ runs/
 
 **/.cache/
 .kotlin/
+
+# 第三方依赖源码参考（不入库）
+reference/
