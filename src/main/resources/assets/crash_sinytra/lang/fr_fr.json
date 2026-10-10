@@ -1,0 +1,4 @@
+{
+  "crash_sinytra.message.with_host": "{0} : Nous ne pouvons pas garantir la compatibilité entre ce mod et Sinytra Connector.\nVeuillez ne pas installer ce mod avec des mods utilisant des composants de Sinytra Connector.",
+  "crash_sinytra.message.without_host": "Sinytra Connector est incompatible avec ce modpack.\nVeuillez ne pas installer ce mod avec des mods utilisant des composants de Sinytra Connector."
+}

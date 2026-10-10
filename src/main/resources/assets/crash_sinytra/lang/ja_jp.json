@@ -1,0 +1,4 @@
+{
+  "crash_sinytra.message.with_host": "{0}: このModとSinytra Connectorの互換性を維持することはできません。\nSinytra Connectorのコンポーネントを使用するModと一緒にインストールしないでください。",
+  "crash_sinytra.message.without_host": "Sinytra ConnectorはこのModパックと互換性がありません。\nSinytra Connectorのコンポーネントを使用するModと一緒にインストールしないでください。"
+}
