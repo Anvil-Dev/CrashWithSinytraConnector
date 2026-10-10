@@ -1,4 +1,4 @@
 {
-  "crash_sinytra.message.with_host": "The mod {0} is incompatible with Sinytra Connector.\nPlease uninstall Sinytra Connector and all of its components, or uninstall {0}, then try again.",
-  "crash_sinytra.message.without_host": "Sinytra Connector is incompatible with this modpack.\nPlease uninstall Sinytra Connector and all of its components, then try again."
+  "crash_sinytra.message.with_host": "{0}: We are unable to maintain compatibility between this mod and Sinytra Connector.\nPlease do not install this mod alongside any mod that uses Sinytra Connector components.",
+  "crash_sinytra.message.without_host": "Sinytra Connector is incompatible with this modpack.\nPlease do not install this mod alongside any mod that uses Sinytra Connector components."
 }
